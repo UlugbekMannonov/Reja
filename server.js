@@ -1,20 +1,18 @@
 console.log("Web Serverni Boshlash");
 const express = require("express");
-const res = require("express/lib/response");
-const req = require("express/lib/request");
 const app = express();
 const http = require("http")
 const fs = require("fs");
 
 
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-    if(err) {
-        console.log("ERROR", err);
-    } else {
-        user = JSON.parse(data);
-    }
-});
+// let user;
+// fs.readFile("database/user.json", "utf8", (err, data) => {
+//     if(err) {
+//         console.log("ERROR", err);
+//     } else {
+//         user = JSON.parse(data);
+//     }
+// });
 
 
 // 1. Kirish codelari
@@ -41,12 +39,18 @@ app.get('/author', (req, res) => {
 
 
 app.get("/", function(req, res) {
-    res.render('harid');
+    res.render('reja');
 });
+
+// const server = http.createServer(app);
+// let PORT = 3000;
+// server.listen(PORT, function() {
+//     console.log(`The server is running successfully on port: ${PORT}`)
+// });
 
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function() {
-    console.log(`The server is running successfully on port: ${PORT}`)
+    console.log(`The server is running successfully on port: ${PORT}, http://localhost${PORT}`)
 });
 
