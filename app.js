@@ -8,14 +8,14 @@ const fs = require("fs");
 const db = require("./server").db();
 
 
-// let user;
-// fs.readFile("database/user.json", "utf8", (err, data) => {
-//     if(err) {
-//         console.log("ERROR", err);
-//     } else {
-//         user = JSON.parse(data);
-//     }
-// });
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+    if(err) {
+        console.log("ERROR", err);
+    } else {
+        user = JSON.parse(data);
+    }
+});
 
 
 // 1. Kirish codelari
