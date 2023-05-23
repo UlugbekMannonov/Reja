@@ -1,10 +1,14 @@
 const http = require("http");
 const mongodb = require("mongodb");
+const express = require("express");
+const app = express();
+const fs = require("fs");
+
 // const { listen } = require("./app");
 
 
 let db;
-const connectionString = "mongodb+srv://mongostas:lSHpiRCAvbpQXiDN@cluster0.gkia0rc.mongodb.net/ç"
+const connectionString = "mongodb+srv://mongostas:lSHpiRCAvbpQXiDN@cluster0.gkia0rc.mongodb.net/Reja"
 
 mongodb.connect(connectionString, {
     useNewUrlParser: true,
@@ -17,7 +21,7 @@ mongodb.connect(connectionString, {
 
         const app = require("./app");
         const server = http.createServer(app);
-        let PORT = 3000;
+        let PORT = 3008;
         server.listen(PORT, function () {
             console.log(
                 `The server is running successfully on PORT: ${PORT}, http://localhost${PORT}`
