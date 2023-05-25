@@ -5,32 +5,45 @@
 
 
 
-// D-TASK 
-class Shop {
-    constructor(non, lagmon, cola) {
-        this.non = non;
-        this.lagmon = lagmon;
-        this.cola = cola;
-    };
-    qoldiq() {
-          const vaqt = new Date().toLocaleTimeString();
-          console.log(`hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
-        }
-    sotish(a, b) {
-      this.non -= b
-    }
-    qabul(a, b) {
-      this.cola += b
+// // D-TASK 
+// class Shop {
+//     constructor(non, lagmon, cola) {
+//         this.non = non;
+//         this.lagmon = lagmon;
+//         this.cola = cola;
+//     };
+//     qoldiq() {
+//           const vaqt = new Date().toLocaleTimeString();
+//           console.log(`hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
+//         }
+//     sotish(a, b) {
+//       this.non -= b
+//     }
+//     qabul(a, b) {
+//       this.cola += b
 
-    }
-}
-  const shop = new Shop(4, 5, 2);
-  shop.sotish("non", 3); 
-  shop.qabul("cola", 4);
-  shop.qoldiq();
+//     }
+// }
+//   const shop = new Shop(4, 5, 2);
+//   shop.sotish("non", 3); 
+//   shop.qabul("cola", 4);
+//   shop.qoldiq();
   
   // ******************************************************************************************************
 
+
+  // TASK-E
+
+  function tubSonmi(son) { 
+    if (son <= 1) return false;
+    if (son % 2 == 0 && son > 2) return false;
+    const s = Math.sqrt(son);
+    for(let i = 3; i <= s; i += 2) {
+        if(son % i === 0) return false;
+    }
+    return true;
+  }
+  console.log(tubSonmi(5));
 
 
 
